@@ -55,9 +55,16 @@ public class Cookie {
         cupsOfChocolateChips = numberOfCookies * (3.9 / 48);
     }
 
-    // toString method to display ingredient amounts
+    // toString method for displaying the ingredients needed for a batch
+    @Override
     public String toString() {
-        return String.format("Batch of %d cookies:\nCups of sugar: %.2f\nCups of butter: %.2f\nCups of flour: %.2f\nCups of chocolate chips: %.2f",
-                numberOfCookies, cupsOfSugar, cupsOfButter, cupsOfFlour, cupsOfChocolateChips);
+        return String.format(
+            "Ingredients needed for Batch:\t\t%d\n" +
+            "Cups of Sugar:\t\t\t\t\t\t\t%.2f\n" +
+            "Cups of Butter:\t\t\t\t\t\t%.2f\n" +
+            "Cups of Flour:\t\t\t\t\t\t\t%.2f\n" +
+            "Cups of Chocolate Chips:\t\t\t%.2f\n",
+            numberOfCookies, cupsOfSugar, cupsOfButter, cupsOfFlour, cupsOfChocolateChips
+        );
     }
 }
